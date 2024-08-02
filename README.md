@@ -39,13 +39,13 @@ const sfmc = new SDK(
     {
         eventHandlers: {
             onLoop: (type, accumulator) => console.log('Looping', type, accumlator.length),
-            onRefresh: (options) => console.log('RefreshingToken.', Options),
+            onRefresh: (options) => console.log('RefreshingToken.', options),
             logRequest: (req) => console.log(req),
             logResponse: (res) => console.log(res),
             onConnectionError: (ex, remainingAttempts) => console.log(ex.code, remainingAttempts)
 
         },
-        requestAttempts : 1
+        requestAttempts: 1,
         retryOnConnectionError: true
     }
 );
